@@ -1,0 +1,79 @@
+<div class="container">
+    <h1>User Registration: </h1>
+    <div class="col-sm-6" style="border: blue; border-style: solid;padding: 20px; margin-left: 150px;">  
+        <form action="/register" method="post">
+            <center>
+                <table >
+                    <tr>
+                        <td>Enter Email ID <sup style="color: red">*</sup>: </td>
+                        <td><input type="email" name="userID" id="uname" maxlength="40" title="Email will become your site user ID " required/></td>
+                    </tr>
+
+                    <tr>
+                        <td>Enter Password <sup style="color: red">*</sup>: </td>
+                        <td><input type="text" name="password1" id="password1" minlength="8" maxlength="32" pattern="(?=^.{8,32}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[~,!,#,$])(?=.*[a-z]).*$" title="Password must be minimum of 8 characters, and include at least 1 number and 1 UPPERCASE letter" required/></td>
+                    </tr>
+                    <tr>
+                        <td>Re-Enter Password <sup style="color: red">*</sup>:</td>
+                        <td><input type="password" id="password2" name="password2" minlength="8" maxlength="32" title="Please enter the same Password as above." required /></td>
+                    </tr>
+                    <tr>
+                        <td>Enter First Name <sup style="color: red">*</sup>: </td>
+                        <td><input type="text" name="fname" id="fname" title="Legal first name" required/></td>
+                    </tr>
+                    <tr>
+                        <td>Enter Last Name <sup style="color: red">*</sup>: </td>
+                        <td><input type="text" name="lname" id="lname" title="Preferred last name" required/></td>
+                    </tr>
+                    <tr>
+                        <td>Enter Address : </td>
+                        <td><input type="text" name="address" id="address" title="Optional: House number and street" /></td>
+                    </tr>
+                    <tr>
+                        <td>Enter City : </td>
+                        <td><input type="text" name="city" id="city" title="Optional: City of residence" /></td>
+                    </tr>
+                    <tr>
+                        <td>Select State : </td>
+                        <td><select name="city" title="Optional: State of residence">
+                                <option value="CA">CA</option>
+                                <option value="LA">LA</option>
+                                <option value="MI">MI</option>
+                                <option value="WA">WA</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Enter Postal Code : </td>
+                        <td><input type="text" name="postalCode" id="postalCode" title="Optional: 5 character zip code" /></td>
+                    </tr>
+                    <tr>
+                        <td>Enter Phone No. : </td>
+                        <td><input type="tel" name="phone" id="phone" pattern="^\d{3}-\d{3}-\d{4}$" title="Optional: Area code plus phone # in 'xxx-xxx-xxxx' format" /></td>
+                    </tr>
+                    <tr>
+                        <td> <input class="button" type="submit" value="submit"></td>
+                        <td><a href="/"><input class="button" type="button" value="Cancel"/></a></td>
+                    </tr>
+
+                </table>
+            </center>
+        </form>  
+    </div>
+    <script>
+        window.onload = function () {
+            var password1 = document.getElementById("password1");
+            var password2 = document.getElementById("password2");
+            password1.onchange = ConfirmPassword;
+            password2.onkeyup = ConfirmPassword;
+            function ConfirmPassword() {
+                password2.setCustomValidity("");
+                if (password1.value !== password2.value) {
+                    password2.setCustomValidity("Password Not Matched.");
+                }
+            }
+        };
+    </script>
+
+</div>
+<br><br>

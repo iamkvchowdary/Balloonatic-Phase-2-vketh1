@@ -1,0 +1,22 @@
+<div class="container">
+    <h2>Our Products</h2>
+    <% offeredProducts.forEach(products => { %>
+    <div class="col-sm-3" style="border: #ee3114; border-style: solid;padding: 10px; margin: 20px; text-align: center">  
+        <img src="<%= products.imageURL%>" width="50" height="200" alt="alt"/>
+        <span style="color: green;">
+            Category : <%= products.category %> 
+        </span>
+        
+        <br><%= products.productID %>
+        <h5><%= products.productName %>  </h5>
+        <span>
+            Color : <%= products.color %> 
+        </span>
+        <br>Material : <%= products.material %>
+        <br>Size : <%= products.size %>
+        <br>
+        Unit Price : <b>$ <%= products.unitPrice %> </b>
+        
+    </div>
+    <% }); %>
+</div>

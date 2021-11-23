@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=1">
+        <title>Balloonatic Asylum</title>
+        <link rel="shortcut icon" type="image/png" href="images/icon.png" />
+        <link rel="stylesheet" href="/css/bootstrap.css">
+        <link rel="stylesheet" href="/css/BalloonaticAsylum.css">
+    </head>
+
+    <body>
+        <div id="nav">
+            <div>
+                <div class="col-sm nav-align" style="float:left;padding: 0 20px 10px 50px ">
+                    <a href="/">
+                        <img src="images/logo.png" alt="Image" height="70"/>
+                    </a>
+                </div>
+                <div class="col-sm nav-align" style="float:left">
+                    <h2 id="title">Balloonatic Asylum</h2>
+                </div>
+            </div>
+            <div class="col-sm nav-align">
+                <a href="/about">
+                    <span class="button">About</span>
+                </a>
+                <a href="/products">
+                    <span class="button">Products</span>
+                </a>
+                <a href="/contact">
+                    <span class="button">Contact</span>
+                </a>
+                <% if (1){ %>
+                <a href="/login">
+                    <span class="button">Login</span>
+                </a>
+                <%} else{%>
+                <a href="/logout">
+                    <span class="button">Logout</span>
+                </a>
+                <%}%>
+            </div>
+            <div style="float: right; padding-right: 20px"  class="col-sm nav-align">
+                <a href="/birthdayBouquets">
+                    <span class="button-1">Birthday Bouquets</span>
+                </a>
+                <a href="/balloonyOccasions">
+                    <span class="button-1">Balloony Occasions</span>
+                </a>
+                <a href="/buildBalloonBouquet">
+                    <span class="button-1">Build a Balloon Bouquet</span>
+                </a>
+                <a href="/decoratingBalloons">
+                    <span class="button-1">Decorating with Balloons</span>
+                </a>
+                <a href="/balloonsBulk">
+                    <span class="button-1">Balloons in Bulk</span>
+                </a>
+            </div>
+        </div>
+        <%- body %>
+        <div id="footer">
+            <div>
+                <div class="col-sm nav-align" style="align-content: center">
+                    <h5>&copy;Balloonatic Asylum</h5>
+                </div>
+            </div>
+            
+        </div>
+    </body>
+
+</html>
